@@ -41,9 +41,9 @@ CREATE TABLE `mahasiswa` (
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`) VALUES
 (1, 'Biyan', '20161025200', 'nayra@gmail.com', 'Teknik Informatika'),
 (2, 'Agus Priyo', '20161025201', 'agus.priyo@gmail.com', 'Teknik Informatika'),
-(3, 'sastro Atomojo Susano', '20161025202', 'sastro.atmojo.susano@gmail.com', 'Teknik Lingkungan'),
+(3, 'Sastro Atmojo Susano', '20161025202', 'sastro.atmojo.susano@gmail.com', 'Teknik Lingkungan'),
 (4, 'Herlan Yuswanul', '20161025203', 'herlan.yuswamul@gmail.com', 'Teknik Lingkungan'),
-(5, 'Muhammad Prabowo', '20161025202', 'sastro.atmojo.susano@gmail.com', 'Teknik Lingkungan');
+(5, 'Muhammad Prabowo', '20161025202', 'prabowo.2@gmail.com', 'Teknik Lingkungan');
 
 --
 -- Indexes for dumped tables
