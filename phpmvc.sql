@@ -39,10 +39,11 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`) VALUES
-(25, 'Doddy Ferdiansyah', '133040123', 'doddy@yahoo.com', 'Teknik Informatika'),
-(30, 'Sandhika Galih', '043040023', 'sandhikagalih@unpas.ac.id', 'Teknik Informatika'),
-(31, 'Nofariza Handayani', '083030030', 'nofa@yahoo.com', 'Teknik Lingkungan'),
-(33, 'Erik Doank', '133040123', 'erik@gmail.com', 'Teknik Mesin');
+(1, 'Biyan', '20161025200', 'nayra@gmail.com', 'Teknik Informatika'),
+(2, 'Agus Priyo', '20161025201', 'agus.priyo@gmail.com', 'Teknik Informatika'),
+(3, 'sastro Atomojo Susano', '20161025202', 'sastro.atmojo.susano@gmail.com', 'Teknik Lingkungan'),
+(4, 'Herlan Yuswanul', '20161025203', 'herlan.yuswamul@gmail.com', 'Teknik Lingkungan'),
+(5, 'Muhammad Prabowo', '20161025202', 'sastro.atmojo.susano@gmail.com', 'Teknik Lingkungan');
 
 --
 -- Indexes for dumped tables
