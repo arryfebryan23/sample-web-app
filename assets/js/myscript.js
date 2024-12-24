@@ -1,10 +1,19 @@
 const flashData = $('.flash-data').data('flashdata');
+const flashDataGagal = $('.flash-data-gagal').data('flashdata');
 
 if (flashData) {
     Swal({
         title: 'Data Mahasiswa ',
         text: 'Berhasil ' + flashData,
         type: 'success'
+    });
+}
+
+if (flashDataGagal) {
+    Swal({
+        title: 'Data Mahasiswa ',
+        text:  flashDataGagal,
+        type: 'error'
     });
 }
 

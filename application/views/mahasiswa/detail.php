@@ -7,6 +7,8 @@
                     Detail Data Mahasiswa
                 </div>
                 <div class="card-body">
+                    <img src="<?= $image_data; ?>" alt="..." class="img-thumbnail img-fluid"></img>
+                    <hr>
                     <h5 class="card-title"><?= $mahasiswa['nama']; ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?= $mahasiswa['email']; ?></h6>
                     <p class="card-text"><?= $mahasiswa['nrp']; ?></p>

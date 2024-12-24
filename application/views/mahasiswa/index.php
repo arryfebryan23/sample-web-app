@@ -1,7 +1,9 @@
 <div class="container">
-    <?php
-    if ($this->session->flashdata('flash')) : ?>
+    <?php if ($this->session->flashdata('flash')) : ?>
     <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php endif; ?>
+    <?php if ($this->session->flashdata('flash_gagal')) : ?>
+    <div class="flash-data-gagal" data-flashdata="<?= $this->session->flashdata('flash_gagal'); ?>"></div>
     <?php endif; ?>
     <!-- <div class="row mt-3">
         <div class="col-md-6">

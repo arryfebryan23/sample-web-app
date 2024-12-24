@@ -8,7 +8,14 @@
                     Form Tambah Data Mahasiswa
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <!-- <div class="form-group">
+                            <img src="<?= base_url('assets/image/icon-image.png'); ?>" alt="..." class="img-thumbnail img-fluid"></img>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="image">Upload File Image</label>
+                            <input type="file" class="form-control-file" id="image" name="image" accept="image/png, image/gif, image/jpeg">
+                        </div>
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" name="nama" class="form-control" id="nama">

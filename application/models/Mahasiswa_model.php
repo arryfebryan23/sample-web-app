@@ -6,13 +6,16 @@ class Mahasiswa_model extends CI_model {
         return $this->db->get('mahasiswa')->result_array();
     }
 
-    public function tambahDataMahasiswa()
+    public function tambahDataMahasiswa($result_upload)
     {
+     
         $data = [
             "nama" => $this->input->post('nama', true),
             "nrp" => $this->input->post('nrp', true),
             "email" => $this->input->post('email', true),
-            "jurusan" => $this->input->post('jurusan', true)
+            "jurusan" => $this->input->post('jurusan', true),
+            "image_oid" => $result_upload['image_oid'],
+            "image_name" => $result_upload['file_name']
         ];
 
         $this->db->insert('mahasiswa', $data);
@@ -21,7 +24,7 @@ class Mahasiswa_model extends CI_model {
     public function hapusDataMahasiswa($id)
     {
         // $this->db->where('id', $id);
-        $this->db->delete('mahasiswa', ['id' => $id]);
+        return $this->db->delete('mahasiswa', ['id' => $id]);
     }
 
     public function getMahasiswaById($id)
@@ -29,14 +32,25 @@ class Mahasiswa_model extends CI_model {
         return $this->db->get_where('mahasiswa', ['id' => $id])->row_array();
     }
 
-    public function ubahDataMahasiswa()
+    public function ubahDataMahasiswa($result_upload = array())
     {
-        $data = [
-            "nama" => $this->input->post('nama', true),
-            "nrp" => $this->input->post('nrp', true),
-            "email" => $this->input->post('email', true),
-            "jurusan" => $this->input->post('jurusan', true)
-        ];
+        if ($result_upload){
+            $data = [
+                "nama" => $this->input->post('nama', true),
+                "nrp" => $this->input->post('nrp', true),
+                "email" => $this->input->post('email', true),
+                "jurusan" => $this->input->post('jurusan', true),
+                "image_oid" => $result_upload['image_oid'],
+                "image_name" => $result_upload['file_name']
+            ];
+        }else{
+            $data = [
+                "nama" => $this->input->post('nama', true),
+                "nrp" => $this->input->post('nrp', true),
+                "email" => $this->input->post('email', true),
+                "jurusan" => $this->input->post('jurusan', true)
+            ];
+        }
 
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('mahasiswa', $data);
